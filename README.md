@@ -6,10 +6,9 @@ entropyof is a simple Linux command-line utility to rapidly compute the Shannon 
 
 ## Installation
 
-## Compilation
-
 ```{shell}
-$ git clone
+$ git clone 
 $ cd ./entropyof 
-$ gcc ./src/entropyof.c -o ./bin/entropyof -lm
+$ make
+$ sudo make install
 ```

@@ -48,12 +48,12 @@ int main(int argc, char** argv) {
 
     // open file and get file stat
     if (!(file_fs = fopen(file_path, "r"))) {
-        printf("[!] Error, could not open file: %s", strerror(errno));
+        fprintf(stderr,"[!] Error, could not open file: %s\n", strerror(errno));
         exit(EXIT_FAILURE);
     }
    
     if (fstat(fileno(file_fs), &file_stat) == -1) {
-        printf("[!] Error, could not get file size: %s", strerror(errno));
+        fprintf(stderr,"[!] Error, could not get file size: %s\n", strerror(errno));
         exit(EXIT_FAILURE);
     }
 
